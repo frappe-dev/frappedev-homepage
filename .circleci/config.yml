@@ -11,11 +11,11 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: npm --prefix ./ install
+          command: npm install
 
       - run: 
           name: Compile react project
-          command: npm --prefix ./ run build
+          command: npm run build
       - persist_to_workspace:
           root: ~/working
           paths:
