@@ -19,7 +19,7 @@ jobs:
       - persist_to_workspace:
           root: ~/working
           paths:
-            - frontend/build
+            - build
   deploy:
     working_directory: ~/working
     docker:
