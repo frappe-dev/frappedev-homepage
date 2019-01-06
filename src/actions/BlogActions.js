@@ -1,9 +1,9 @@
 import { actionNameList } from '../ActionNameList';
 
-export const addBlogArticle = (todo) => ({
+export const addBlogArticle = (blogArticleCard) => ({
   type: actionNameList.addBlogArticle,
   payload: {
-    todo
+    blogArticleCard
   }
 })
 

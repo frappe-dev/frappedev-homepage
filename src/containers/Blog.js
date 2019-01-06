@@ -40,9 +40,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addBlogArticle: (blogArticle) => {
-    dispatch(addBlogArticle(blogArticle))
-    dispatch(reset('blogArticle'))
+  addBlogArticle: (blogArticleCard) => {
+    dispatch(addBlogArticle(blogArticleCard))
+    dispatch(reset('blogArticleCard'))
   },
   deleteBlogArticle: (index) =>  dispatch(deleteBlogArticle(index)),
 });
