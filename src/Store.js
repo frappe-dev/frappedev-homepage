@@ -4,7 +4,7 @@ import BlogReducer from './reducers/BlogReducer';
 
 const reducer = combineReducers({
   form: reduxFormReducer,
-  todoList: BlogReducer,
+  blogArticleCards: BlogReducer,
 });
 
 const store = createStore(

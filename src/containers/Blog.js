@@ -27,7 +27,7 @@ class Blog extends React.Component {
         <BlogInputForm onSubmit={this.props.addBlogArticle}/>
         <hr />
         <BlogArticleCards
-          todoList={this.props.todoList}
+          blogArticleCards={this.props.blogArticleCards}
           handleDelete={this.handleDelete}
         />
       </div>
@@ -36,7 +36,7 @@ class Blog extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  todoList: state.todoList,
+  blogArticleCards: state.blogArticleCards,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import renderTextField from '../components/BlogInputTextField';
+import BlogInputTextField from '../components/BlogInputTextField';
 import IconLabelButton from '../components/BlogButton';
 
-const TodoForm = props => {
+const BlogInputForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -13,7 +13,7 @@ const TodoForm = props => {
             id="name"
             name="title"
             label="Title"
-            component={renderTextField}
+            component={BlogInputTextField}
             type="text"
             margin="normal"
           />
@@ -25,7 +25,7 @@ const TodoForm = props => {
             id="multiline-flexible"
             name="description"
             label="Description"
-            component={renderTextField}
+            component={BlogInputTextField}
             type="text"
             multiline
             rowsMax="4"
@@ -55,4 +55,4 @@ const TodoForm = props => {
 
 export default reduxForm({
   form: 'blogArticle',
-})(TodoForm);
+})(BlogInputForm);

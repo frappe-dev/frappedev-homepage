@@ -11,7 +11,7 @@ const styles = theme => ({
   },
 });
 
-const renderTextField = props => {
+const BlogInputTextField = props => {
   const { input, classes, ...custom } = props;
   return (
     <TextField
@@ -22,8 +22,8 @@ const renderTextField = props => {
   );
 }
 
-renderTextField.propTypes = {
+BlogInputTextField.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(renderTextField);
+export default withStyles(styles)(BlogInputTextField);

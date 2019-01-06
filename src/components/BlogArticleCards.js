@@ -3,10 +3,10 @@ import BlogArticleCard from './BlogArticleCard';
 
 export default class TodoList extends React.Component {
   render() {
-    const { todoList } = this.props;
+    const { blogArticleCards } = this.props;
     return (
       <div>
-        {todoList.map((blogArticleCard, i) => (
+        {blogArticleCards.map((blogArticleCard, i) => (
           <BlogArticleCard
             key={i}
             title={blogArticleCard.title}
