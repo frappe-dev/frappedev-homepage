@@ -24,7 +24,7 @@ const styles = {
     },
 };
 
-class SwipeableDrawer extends Component {
+class DrawerSideMenu extends Component {
     state = {
         left: false,
     };
@@ -87,8 +87,8 @@ class SwipeableDrawer extends Component {
     }
 }
 
-SwipeableDrawer.propTypes = {
+DrawerSideMenu.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withRouter(withStyles(styles)(SwipeableDrawer));
+export default withRouter(withStyles(styles)(DrawerSideMenu));

@@ -1,4 +1,3 @@
-// AppBar
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -8,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 
 //DrawerSideMenu
-import DrawerSideMenu from './drawers-side-menu';
+import DrawerSideMenu from './DrawerSideMenu';
  
 // AppBar
 const styles = {
@@ -24,10 +23,8 @@ const styles = {
   },
 };
  
-function ButtonAppBar(props) {
- 
+function AppHeader(props) {
   const { classes } = props;
- 
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -44,8 +41,8 @@ function ButtonAppBar(props) {
   );
 }
 
-ButtonAppBar.propTypes = {
+AppHeader.propTypes = {
   classes: PropTypes.object.isRequired,
 };
  
-export default withStyles(styles)(ButtonAppBar);
+export default withStyles(styles)(AppHeader);
