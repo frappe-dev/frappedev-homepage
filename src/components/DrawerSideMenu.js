@@ -11,6 +11,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import HomeIcon from '@material-ui/icons/Home';
+import DescriptionIcon from '@material-ui/icons/Description';
+import EmailIcon from '@material-ui/icons/Email';
+
 
 // 参考
 // https://material-ui.com/demos/drawers/
@@ -24,7 +27,7 @@ const styles = {
     },
 };
 
-class SwipeableDrawer extends Component {
+class DrawerSideMenu extends Component {
     state = {
         left: false,
     };
@@ -35,12 +38,20 @@ class SwipeableDrawer extends Component {
         });
     };
 
+    handleToHome = () => {
+        this.props.history.push('/')
+    }
+
     handleToProductsPage = () => {
         this.props.history.push('/products')
     }
 
-    handleToHome = () => {
-        this.props.history.push('/')
+    handleToBlogPage = () => {
+        this.props.history.push('blog')
+    }
+
+    handleToContactPage = () => {
+        this.props.history.push('contact')
     }
 
     render() {
@@ -49,17 +60,24 @@ class SwipeableDrawer extends Component {
         const sideList = (
             <div className={classes.list}>
                 <List>
-                    {['Our Products'].map((text, index) => (
-                        <ListItem button key={text} onClick={this.handleToProductsPage}>
-                            <ListItemIcon><GetAppIcon/></ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                    <ListItem button key='product' onClick={this.handleToProductsPage}>
+                        <ListItemIcon><GetAppIcon /></ListItemIcon>
+                        <ListItemText primary='Our Products' />
+                    </ListItem>
 
-                    ))}
+                    <ListItem button key='blog' onClick={this.handleToBlogPage}>
+                        <ListItemIcon><DescriptionIcon /></ListItemIcon>
+                        <ListItemText primary='Blog' />
+                    </ListItem>
+
+                    <ListItem button key='contact' onClick={this.handleToContactPage}>
+                        <ListItemIcon><EmailIcon /></ListItemIcon>
+                        <ListItemText primary='Contact Us' />
+                    </ListItem>
                 </List>
                 <Divider />
                 <List>
-                    {['Home'].map((text, index) => (
+                    {['Home'].map((text) => (
                         <ListItem button key={text} onClick={this.handleToHome}>
                             <ListItemIcon><HomeIcon /></ListItemIcon>
                             <ListItemText primary={text} />
@@ -87,8 +105,8 @@ class SwipeableDrawer extends Component {
     }
 }
 
-SwipeableDrawer.propTypes = {
+DrawerSideMenu.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withRouter(withStyles(styles)(SwipeableDrawer));
+export default withRouter(withStyles(styles)(DrawerSideMenu));

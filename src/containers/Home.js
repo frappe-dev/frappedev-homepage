@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import ButtonAppBar from "../components/header";
+import AppHeader from "../components/AppHeader";
 
 class Home extends Component {
     render() {
         return (
             <div>
-                <ButtonAppBar />
-                this is home
+                <AppHeader />
+                home
             </div>
         );
     }
 }
 
-export default  withRouter(Home);
+export default withRouter(Home);

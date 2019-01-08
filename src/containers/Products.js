@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 
 import ProductCard from '../components/ProductCard'
-import ButtonAppBar from "../components/header";
+import AppHeader from "../components/AppHeader";
 
 class Products extends Component {
     render() {
         return (
             <div>
-                <ButtonAppBar />
+                <AppHeader />
                 this is the page of products.
                 <ProductCard
                   productName = "Fast Idea"

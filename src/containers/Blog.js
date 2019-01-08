@@ -7,7 +7,7 @@ import BlogArticleCards from '../components/BlogArticleCards';
 import Typography from '@material-ui/core/Typography';
 import { withRouter } from 'react-router';
 
-import ButtonAppBar from "../components/header";
+import AppHeader from "../components/AppHeader";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class Blog extends React.Component {
   render() {
     return (
       <div>
-        <ButtonAppBar />
+        <AppHeader />
         <Typography variant="display3" gutterBottom>Frappe技術ブログ</Typography>
         <BlogInputForm onSubmit={this.props.addBlogArticle}/>
         <hr />
